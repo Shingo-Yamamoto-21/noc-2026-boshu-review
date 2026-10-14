@@ -102,22 +102,87 @@
       color: var(--ink);
     }
     footer { color: var(--muted); font-size: 0.88rem; margin-top: 20px; }
+
+    .ped-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+      margin: 8px 0 16px;
+    }
+    .swipe-hint { display: none; margin: 0 0 6px; color: var(--muted); font-size: 0.88rem; }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0 0 8px; font-size: 0.88rem; }
+    .swatch { display: inline-block; width: 14px; height: 14px; border: 1px solid #d9d1c3; vertical-align: -2px; margin-right: 4px; }
+    .ped { border-collapse: collapse; min-width: 780px; width: max-content; font-size: 12px; line-height: 1.35; }
+    .ped td { border: 1px solid #d9d1c3; padding: 4px 6px; vertical-align: middle; min-width: 148px; width: 148px; }
+    .ped .nm { font-weight: 600; }
+    .ped .meta { color: var(--muted); font-size: 11px; margin-top: 2px; }
+    .ped .male { background: #e7f2fb; }
+    .ped .female { background: #fdecef; }
+    .ped .point { outline: 2px solid #1e4a38; outline-offset: -2px; }
+    .ped .point .nm { font-weight: 700; }
+    .ped .empty { background: #f7f4ee; color: var(--muted); }
+
     @media (max-width: 720px) {
       main { width: min(100% - 24px, 960px); padding-top: 20px; }
       .summary { grid-template-columns: 1fr; }
       section { padding: 16px 14px; }
       th, td { padding: 8px 4px; }
+      .swipe-hint { display: block; }
+      .ped td { padding: 4px 6px; }
     }
   </style>
 </head>
 <body>
 <main>
-  <header>
+<header>
     <h1>ノルマンディー2026 タイトルホルダー産駒3頭の評価</h1>
     <p class="lead">シュヴァリエの2025、シュエットヌーベルの2025、ランウェイデビューの25。点数は1から10で、3頭の順位に合わせて曲げていません。単純平均は3項目を同じ重みにしたものです。</p>
   </header>
 
-  <section>
+<section>
+    <h2>前提</h2>
+    <p>タイトルホルダー産駒は初年度で、この父の過去の実績馬はありません。父側は3頭共通です。</p>
+    <h3>タイトルホルダーの構成</h3>
+    <ul>
+      <li>父ドゥラメンテ。キングカメハメハ＋アドマイヤグルーヴで、ルーラーシップ＋サンデーサイレンスに対応づけている。母母エアグルーヴはトニービン＋ノーザンテースト。日本の主流血統の塊。</li>
+      <li>母メーヴェ。父Motivatorは Sadler's Wells＋Gone West。母Top Tableは Mill Reef＋Northern Dancer。スピードのある近代の欧州血統。</li>
+    </ul>
+    <h3>参考馬</h3>
+    <p>タイトルホルダーの構成を土台に、それ以外を足して走った馬です。この父の産駒が同じように走る証拠ではありません。</p>
+    <ul>
+      <li>ミュージアムマイル。父リオンディーズはキングカメハメハ＋シーザリオ。母ミュージアムヒルはハーツクライ、フレンチデピュティ、ノーザンテースト。サンデーサイレンスは <code>4×3</code>（血統表の血量18.75%）。Northern Dancer の近い重なりは <code>5×5</code>。</li>
+      <li>マスクトディーヴァ。父ルーラーシップ、母父ディープインパクト。母母ビハインドザマスクは、記事がダンシングブレーヴと相似と書くアルザオ、ナスキロ、Mr. Prospector。Mr. Prospector は <code>4×4</code>。同じ母のドゥラメンテ産駒マスカレードボールは、サンデーサイレンスが <code>3×3</code>。ルーラーシップ自身はサンデーを持たない。</li>
+      <li>スターズオンアース。ドゥラメンテに Smart Strike を足した高額馬。ランウェイデビューの25の母父の中にある Smart Strike より、母父そのものが Smart Strike である。</li>
+    </ul>
+    <h3>足したい点</h3>
+    <ul>
+      <li>日本の適性として、サンデーサイレンスを母から足す。</li>
+      <li>米国のスピード。Northern Dancer に Teddy・Menow が近い形。例はダンシングブレーヴ、Nijinsky、Danehill。</li>
+      <li>ナスキロ。フレンチデピュティ、ノーザンテーストと Vice Regent の近い構成。Nasrullah と Princequillo が近い位置にあること。Caerleon は父 Nijinsky、母がナスキロ。</li>
+      <li>Pretty Pollyいじりはおまじないとして見る。Pretty Polly と Donatello、全妹 Miranda と Worden。Lady Angela に脈絡する血として Alibhai、Aureole、Alycidon。</li>
+      <li>欧州の血は、あまり足さない方がよい、という見立てもある。</li>
+    </ul>
+    <h3>3頭の母の入口</h3>
+    <ul>
+      <li>シュヴァリエの2025（募集番号3）。母父フレンチデピュティ。母母父ジェネラス（父Caerleon）。</li>
+      <li>シュエットヌーベルの2025（募集番号11）。母父スマートファルコン。父ゴールドアリュールの母方に Nijinsky。母母父タイキシャトルの母父は Caerleon。母母母タニノメールは、父リヴリア（父父 Riverman）、母父父 Nijinsky。</li>
+      <li>ランウェイデビューの25（募集番号25）。母父ストロングリターン。父シンボリクリスエスは Kris S.、母父父 Seattle Slew、母母 Tri Argo の父方に Tom Fool。母父 Smart Strike の母母母に Classy Quillo。母母父 Nijinsky。母母母タバサトウショウはスウィープトウショウの母で、その父はダンシングブレーヴ。</li>
+    </ul>
+  </section>
+
+  
+<section>
+    <h2>点数の基準</h2>
+    <h3>血統</h3>
+    <p>足したい順は、サンデーサイレンス、米国スピード（ダンシングブレーヴ、Nijinsky、Danehill、Mr. Prospector）、近いナスキロです。10点は、母の3代以内にサンデーがあり、米国スピードか近いナスキロも母方4代以内にある形です。これはミュージアムマイルの <code>4×3</code> や、マスカレードボールの <code>3×3</code> に当たる位置で、今回の3頭にはありません。Pretty Pollyいじりは15代まで確認し、加点していません。</p>
+    <h3>馬体サイズ</h3>
+    <p>2026年9月28日の計測です。牡の管囲20.0cm以上を基準とし、同じ募集の牡24頭の中での位置で点を付けます。体高の中央は155cm、管囲の中央は20.5cm、体重の中央は448kgです。</p>
+    <h3>近親馬の実績</h3>
+    <p>兄弟（同じ母の2024年産以前）を主にし、母の兄弟といとこ（母の姉妹の子）を加えます。金額は中央の本賞金です。スウィープトウショウは母の叔母なので、ランウェイデビューの25の点には入れていません。</p>
+  </section>
+
+  
+<section>
     <h2>合計の単純平均</h2>
     <div class="summary">
       <article>
@@ -152,98 +217,8 @@
       </article>
     </div>
     <p class="note">同じ重みではランウェイデビューの25がわずかに上です。近親を最優先するとシュヴァリエの2025、サンデーのクロスを最優先するとシュエットヌーベルの2025です。</p>
-  </section>
-
-  <section>
-    <h2>点数の基準</h2>
-    <h3>血統</h3>
-    <p>足したい順は、サンデーサイレンス、米国スピード（ダンシングブレーヴ、Nijinsky、Danehill、Mr. Prospector）、近いナスキロです。10点は、母の3代以内にサンデーがあり、米国スピードか近いナスキロも母方4代以内にある形です。これはミュージアムマイルの <code>4×3</code> や、マスカレードボールの <code>3×3</code> に当たる位置で、今回の3頭にはありません。Pretty Pollyいじりは15代まで確認し、加点していません。</p>
-    <h3>馬体サイズ</h3>
-    <p>2026年9月28日の計測です。牡の管囲20.0cm以上を基準とし、同じ募集の牡24頭の中での位置で点を付けます。体高の中央は155cm、管囲の中央は20.5cm、体重の中央は448kgです。</p>
-    <h3>近親馬の実績</h3>
-    <p>兄弟（同じ母の2024年産以前）を主にし、母の兄弟といとこ（母の姉妹の子）を加えます。金額は中央の本賞金です。スウィープトウショウは母の叔母なので、ランウェイデビューの25の点には入れていません。</p>
-  </section>
-
-  <section>
-    <h2>前提</h2>
-    <p>タイトルホルダー産駒は初年度で、この父の過去の実績馬はありません。父側は3頭共通です。</p>
-    <h3>タイトルホルダーの構成</h3>
-    <ul>
-      <li>父ドゥラメンテ。キングカメハメハ＋アドマイヤグルーヴで、ルーラーシップ＋サンデーサイレンスに対応づけている。母母エアグルーヴはトニービン＋ノーザンテースト。日本の主流血統の塊。</li>
-      <li>母メーヴェ。父Motivatorは Sadler's Wells＋Gone West。母Top Tableは Mill Reef＋Northern Dancer。スピードのある近代の欧州血統。</li>
-    </ul>
-    <h3>参考馬</h3>
-    <p>タイトルホルダーの構成を土台に、それ以外を足して走った馬です。この父の産駒が同じように走る証拠ではありません。</p>
-    <ul>
-      <li>ミュージアムマイル。父リオンディーズはキングカメハメハ＋シーザリオ。母ミュージアムヒルはハーツクライ、フレンチデピュティ、ノーザンテースト。サンデーサイレンスは <code>4×3</code>（血統表の血量18.75%）。Northern Dancer の近い重なりは <code>5×5</code>。</li>
-      <li>マスクトディーヴァ。父ルーラーシップ、母父ディープインパクト。母母ビハインドザマスクは、記事がダンシングブレーヴと相似と書くアルザオ、ナスキロ、Mr. Prospector。Mr. Prospector は <code>4×4</code>。同じ母のドゥラメンテ産駒マスカレードボールは、サンデーサイレンスが <code>3×3</code>。ルーラーシップ自身はサンデーを持たない。</li>
-      <li>スターズオンアース。ドゥラメンテに Smart Strike を足した高額馬。ランウェイデビューの25の母父の中にある Smart Strike より、母父そのものが Smart Strike である。</li>
-    </ul>
-    <h3>足したい点</h3>
-    <ul>
-      <li>日本の適性として、サンデーサイレンスを母から足す。</li>
-      <li>米国のスピード。Northern Dancer に Teddy・Menow が近い形。例はダンシングブレーヴ、Nijinsky、Danehill。</li>
-      <li>ナスキロ。フレンチデピュティ、ノーザンテーストと Vice Regent の近い構成。Nasrullah と Princequillo が近い位置にあること。Caerleon は父 Nijinsky、母がナスキロ。</li>
-      <li>Pretty Pollyいじりはおまじないとして見る。Pretty Polly と Donatello、全妹 Miranda と Worden。Lady Angela に脈絡する血として Alibhai、Aureole、Alycidon。</li>
-      <li>欧州の血は、あまり足さない方がよい、という見立てもある。</li>
-    </ul>
-    <h3>3頭の母の入口</h3>
-    <ul>
-      <li>シュヴァリエの2025（募集番号3）。母父フレンチデピュティ。母母父ジェネラス（父Caerleon）。</li>
-      <li>シュエットヌーベルの2025（募集番号11）。母父スマートファルコン。父ゴールドアリュールの母方に Nijinsky。母母父タイキシャトルの母父は Caerleon。母母母タニノメールは、父リヴリア（父父 Riverman）、母父父 Nijinsky。</li>
-      <li>ランウェイデビューの25（募集番号25）。母父ストロングリターン。父シンボリクリスエスは Kris S.、母父父 Seattle Slew、母母 Tri Argo の父方に Tom Fool。母父 Smart Strike の母母母に Classy Quillo。母母父 Nijinsky。母母母タバサトウショウはスウィープトウショウの母で、その父はダンシングブレーヴ。</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>シュヴァリエの2025</h2>
-    <p>募集番号3。牡。2025年4月17日生。総額3,500万円、一口7.0万円。栗東・吉岡辰弥。母14歳の7番仔。</p>
-    <div class="scroll">
-      <table>
-        <caption class="lead">項目ごとの点</caption>
-        <thead><tr><th>項目</th><th class="num">点</th><th>内容</th></tr></thead>
-        <tbody>
-          <tr><td>血統</td><td class="num">5</td><td>フレンチデピュティが母父で、ナスキロは3頭で一番近い。サンデーは父方4代だけで、クロスにならない。Nijinsky は母方5代。ジェネラスの Caerleon は母方4代で、控えたいとした欧州側でもある。Pretty Polly は11本。Donatello は母方9代で3頭で一番近い。母方が足すのは Lady Angela 経由の2本。Worden はない。</td></tr>
-          <tr><td>馬体</td><td class="num">4</td><td>体高150.0cmは牡24頭の最小グループ。胸囲174cm、管囲20.0cm、体重422kg。管囲は基準ちょうどで、切ってはいない。7番仔なので、初仔だから小さい、という読みは当たらない。</td></tr>
-          <tr><td>近親</td><td class="num">9</td><td>兄弟5頭が勝ち上がり、本賞金合計3億2,120万円。ゴールドパラディン1億388万円、プリュムドール9,291万円、シュヴェルトライテ6,660万円、セーヌドゥレーヴ4,535万円、ベルシュヴァル1,246万円。いとこで本賞金があるのはゴールドドレッサ1,070万円だけ。母の兄弟にハギノアレグリアス2億3,070万円、タニノエポレット1億8,232万円。</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section>
-    <h2>シュエットヌーベルの2025</h2>
-    <p>募集番号11。牡。2025年4月21日生。総額1,960万円、一口4.9万円。栗東・小椋研介。母11歳の4番仔。</p>
-    <div class="scroll">
-      <table>
-        <thead><tr><th>項目</th><th class="num">点</th><th>内容</th></tr></thead>
-        <tbody>
-          <tr><td>血統</td><td class="num">7</td><td>サンデーサイレンスが <code>4×4</code> で、3頭では一番近い。母方の入り方はスマートファルコンの父ゴールドアリュールで、ダート側のサンデー。参考馬の3代以内には届かない。Nijinsky は母方6代、Riverman は母方5代、Caerleon は母方5代。Pretty Polly は17本で一番多い。母方の Baby Polly は10代で一番近い。Worden はない。</td></tr>
-          <tr><td>馬体</td><td class="num">6</td><td>体高153.0cmで中央より少し下。胸囲177cm、管囲20.5cmは中央。体重442kg。基準は満たし、3頭の中間。</td></tr>
-          <tr><td>近親</td><td class="num">4</td><td>兄弟はリバーブレーション98万円、シュエットアムール56万円。出走2頭、勝ち上がり0、合計154万円。いとこは0頭。母自身は6,295万円、母の兄弟タケルラスティは4,222万円で、産駒には出ていない。</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section>
-    <h2>ランウェイデビューの25</h2>
-    <p>募集番号25。牡。2025年3月12日生。総額2,560万円、一口6.4万円。栗東・清水久詞。母10歳の5番仔。</p>
-    <div class="scroll">
-      <table>
-        <thead><tr><th>項目</th><th class="num">点</th><th>内容</th></tr></thead>
-        <tbody>
-          <tr><td>血統</td><td class="num">6</td><td>ダンシングブレーヴが母方4代、Mr. Prospector が <code>5×5</code> で、米国スピードは3頭で一番近い。サンデーは <code>4×5</code>。Kris S. は母方4代、Seattle Slew は母方6代で、2代の中のナスキロではない。Pretty Polly では、タイトルホルダーの Lady Angela 以外の2本、Lady Maureen と Baby Polly を母も持っている。15代前後なので点は動かしていない。Worden はない。</td></tr>
-          <tr><td>馬体</td><td class="num">8</td><td>体高156.0cmで、牡24頭では上に6頭。管囲21.0cmは最大タイ。胸囲177cm。体重436kgは中央より下で、骨の割に重い馬ではない。10点は体高・管囲・体重が揃って上位にある場合。</td></tr>
-          <tr><td>近親</td><td class="num">5</td><td>兄弟はランウェイミューズ975万円、デビューフライト566万円。出走3頭、勝ち上がり0、合計1,541万円。芝19戦で3着内6回、良馬場の上がり最良は芝32.9秒。いとこは0頭。母自身の1,955万円が、デビュートウショウの産駒で本賞金がある唯一の馬。スウィープトウショウは点に入れていない。</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section>
-    <h2>3項目の一覧</h2>
-    <div class="scroll">
+  
+<div class="scroll">
       <table>
         <thead>
           <tr><th>馬</th><th class="num">血統</th><th class="num">馬体</th><th class="num">近親</th><th class="num">平均</th></tr>
@@ -258,8 +233,176 @@
     <p>3頭とも初仔ではなく、管囲は20.0cm以上です。タイトルホルダーの産駒実績はまだありません。</p>
   </section>
 
+  <section>
+    <h2>シュヴァリエの2025</h2>
+    <p>募集番号3。牡。2025年4月17日生。生産地は新ひだか町。総額3,500万円、一口7.0万円。栗東・吉岡辰弥。母14歳の7番仔。</p>
+<h3>5代血統表</h3>
+<div class="legend"><span><i class="swatch" style="background:#e7f2fb"></i>牡</span><span><i class="swatch" style="background:#fdecef"></i>牝</span><span><i class="swatch" style="background:#e7f2fb;outline:2px solid #1e4a38;outline-offset:-2px"></i>前提で名前を挙げた馬</span></div>
+<p class="swipe-hint">スマートフォンでは、血統表を横にスワイプできます。</p>
+<div class="ped-scroll" tabindex="0" aria-label="シュヴァリエの2025の5代血統表">
+<table class="ped">
+<tr><td rowspan="16" class="male point"><div class="nm">タイトルホルダー</div><div class="meta">2018 新ひだか町</div></td><td rowspan="8" class="male point"><div class="nm">ドゥラメンテ</div><div class="meta">2012 安平町</div></td><td rowspan="4" class="male point"><div class="nm">キングカメハメハ</div><div class="meta">2001 早来町</div></td><td rowspan="2" class="male"><div class="nm">Kingmambo</div><div class="meta">1990 米</div></td><td rowspan="1" class="male point"><div class="nm">Mr. Prospector</div><div class="meta">1970 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Miesque</div><div class="meta">1984</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">マンファス</div><div class="meta">1991 愛</div></td><td rowspan="1" class="male"><div class="nm">Last Tycoon</div><div class="meta">1983</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Pilot Bird</div><div class="meta">1983</div></td></tr>
+<tr><td rowspan="4" class="female point"><div class="nm">アドマイヤグルーヴ</div><div class="meta">2000 早来町</div></td><td rowspan="2" class="male point"><div class="nm">サンデーサイレンス</div><div class="meta">1986 米</div></td><td rowspan="1" class="male"><div class="nm">Halo</div><div class="meta">1969 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Wishing Well</div><div class="meta">1975</div></td></tr>
+<tr><td rowspan="2" class="female point"><div class="nm">エアグルーヴ</div><div class="meta">1993 早来町</div></td><td rowspan="1" class="male point"><div class="nm">トニービン</div><div class="meta">1983 愛</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">ダイナカール</div><div class="meta">1980 白老町</div></td></tr>
+<tr><td rowspan="8" class="female point"><div class="nm">メーヴェ</div><div class="meta">2008 英</div></td><td rowspan="4" class="male point"><div class="nm">Motivator</div><div class="meta">2002 英</div></td><td rowspan="2" class="male"><div class="nm">Montjeu</div><div class="meta">1996</div></td><td rowspan="1" class="male point"><div class="nm">Sadler&#x27;s Wells</div><div class="meta">1981 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Floripedes</div><div class="meta">1985</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Out West</div><div class="meta">1994</div></td><td rowspan="1" class="male point"><div class="nm">Gone West</div><div class="meta">1984 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Chellingoua</div><div class="meta">1983</div></td></tr>
+<tr><td rowspan="4" class="female point"><div class="nm">Top Table</div><div class="meta">1989</div></td><td rowspan="2" class="male point"><div class="nm">Shirley Heights</div><div class="meta">1975 英</div></td><td rowspan="1" class="male point"><div class="nm">Mill Reef</div><div class="meta">1968 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Hardiemma</div><div class="meta">1969</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Lora&#x27;s Guest</div><div class="meta">1984</div></td><td rowspan="1" class="male"><div class="nm">Be My Guest</div><div class="meta">1974</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Lora</div><div class="meta">1972</div></td></tr>
+<tr><td rowspan="16" class="female"><div class="nm">シュヴァリエ</div><div class="meta">2011 新ひだか町</div></td><td rowspan="8" class="male point"><div class="nm">フレンチデピュティ</div><div class="meta">1992 米</div></td><td rowspan="4" class="male"><div class="nm">Deputy Minister</div><div class="meta">1979 加</div></td><td rowspan="2" class="male point"><div class="nm">Vice Regent</div><div class="meta">1967</div></td><td rowspan="1" class="male point"><div class="nm">Northern Dancer</div><div class="meta">1961 加</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Victoria Regina</div><div class="meta">1958</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Mint Copy</div><div class="meta">1970</div></td><td rowspan="1" class="male"><div class="nm">Bunty&#x27;s Flight</div><div class="meta">1953</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Shakney</div><div class="meta">1964</div></td></tr>
+<tr><td rowspan="4" class="female"><div class="nm">Mitterand</div><div class="meta">1981</div></td><td rowspan="2" class="male"><div class="nm">Hold Your Peace</div><div class="meta">1969</div></td><td rowspan="1" class="male"><div class="nm">Speak John</div><div class="meta">1958</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Blue Moon</div><div class="meta">1948</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Laredo Lass</div><div class="meta">1971</div></td><td rowspan="1" class="male"><div class="nm">Bold Ruler</div><div class="meta">1954</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Fortunate Isle</div><div class="meta">1959</div></td></tr>
+<tr><td rowspan="8" class="female"><div class="nm">タニノカリス</div><div class="meta">1997 静内町</div></td><td rowspan="4" class="male point"><div class="nm">ジェネラス</div><div class="meta">1988 愛</div></td><td rowspan="2" class="male point"><div class="nm">Caerleon</div><div class="meta">1980 米</div></td><td rowspan="1" class="male point"><div class="nm">Nijinsky</div><div class="meta">1967 加</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Foreseer</div><div class="meta">1969</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Doff the Derby</div><div class="meta">1981</div></td><td rowspan="1" class="male"><div class="nm">Master Derby</div><div class="meta">1972</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Margarethen</div><div class="meta">1962</div></td></tr>
+<tr><td rowspan="4" class="female"><div class="nm">タニノクリスタル</div><div class="meta">1988 静内町</div></td><td rowspan="2" class="male"><div class="nm">クリスタルパレス</div><div class="meta">1974 仏</div></td><td rowspan="1" class="male"><div class="nm">Caro</div><div class="meta">1967 愛</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Hermieres</div><div class="meta">1958</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">タニノシーバード</div><div class="meta">1972 米</div></td><td rowspan="1" class="male"><div class="nm">Sea-Bird</div><div class="meta">1962 仏</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Flaxen</div><div class="meta">1968</div></td></tr>
+</table>
+</div>
+
+    <div class="scroll">
+      <table>
+        <caption class="lead">項目ごとの点</caption>
+        <thead><tr><th>項目</th><th class="num">点</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>血統</td><td class="num">5</td><td>フレンチデピュティが母父で、ナスキロは3頭で一番近い。サンデーは父方4代だけで、クロスにならない。Nijinsky は母方5代。ジェネラスの Caerleon は母方4代で、控えたいとした欧州側でもある。Pretty Polly は11本。Donatello は母方9代で3頭で一番近い。母方が足すのは Lady Angela 経由の2本。Worden はない。</td></tr>
+          <tr><td>馬体</td><td class="num">4</td><td>体高150.0cmは牡24頭の最小グループ。胸囲174cm、管囲20.0cm、体重422kg。管囲は基準ちょうどで、切ってはいない。7番仔なので、初仔だから小さい、という読みは当たらない。</td></tr>
+          <tr><td>近親</td><td class="num">9</td><td>兄弟5頭が勝ち上がり、本賞金合計3億2,120万円。ゴールドパラディン1億388万円、プリュムドール9,291万円、シュヴェルトライテ6,660万円、セーヌドゥレーヴ4,535万円、ベルシュヴァル1,246万円。いとこで本賞金があるのはゴールドドレッサ1,070万円だけ。母の兄弟にハギノアレグリアス2億3,070万円、タニノエポレット1億8,232万円。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  
+<section>
+    <h2>シュエットヌーベルの2025</h2>
+    <p>募集番号11。牡。2025年4月21日生。生産地は新ひだか町。総額1,960万円、一口4.9万円。栗東・小椋研介。母11歳の4番仔。</p>
+<h3>5代血統表</h3>
+<div class="legend"><span><i class="swatch" style="background:#e7f2fb"></i>牡</span><span><i class="swatch" style="background:#fdecef"></i>牝</span><span><i class="swatch" style="background:#e7f2fb;outline:2px solid #1e4a38;outline-offset:-2px"></i>前提で名前を挙げた馬</span></div>
+<p class="swipe-hint">スマートフォンでは、血統表を横にスワイプできます。</p>
+<div class="ped-scroll" tabindex="0" aria-label="シュエットヌーベルの2025の5代血統表">
+<table class="ped">
+<tr><td rowspan="16" class="male point"><div class="nm">タイトルホルダー</div><div class="meta">2018 新ひだか町</div></td><td rowspan="8" class="male point"><div class="nm">ドゥラメンテ</div><div class="meta">2012 安平町</div></td><td rowspan="4" class="male point"><div class="nm">キングカメハメハ</div><div class="meta">2001 早来町</div></td><td rowspan="2" class="male"><div class="nm">Kingmambo</div><div class="meta">1990 米</div></td><td rowspan="1" class="male point"><div class="nm">Mr. Prospector</div><div class="meta">1970 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Miesque</div><div class="meta">1984</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">マンファス</div><div class="meta">1991 愛</div></td><td rowspan="1" class="male"><div class="nm">Last Tycoon</div><div class="meta">1983</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Pilot Bird</div><div class="meta">1983</div></td></tr>
+<tr><td rowspan="4" class="female point"><div class="nm">アドマイヤグルーヴ</div><div class="meta">2000 早来町</div></td><td rowspan="2" class="male point"><div class="nm">サンデーサイレンス</div><div class="meta">1986 米</div></td><td rowspan="1" class="male"><div class="nm">Halo</div><div class="meta">1969 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Wishing Well</div><div class="meta">1975</div></td></tr>
+<tr><td rowspan="2" class="female point"><div class="nm">エアグルーヴ</div><div class="meta">1993 早来町</div></td><td rowspan="1" class="male point"><div class="nm">トニービン</div><div class="meta">1983 愛</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">ダイナカール</div><div class="meta">1980 白老町</div></td></tr>
+<tr><td rowspan="8" class="female point"><div class="nm">メーヴェ</div><div class="meta">2008 英</div></td><td rowspan="4" class="male point"><div class="nm">Motivator</div><div class="meta">2002 英</div></td><td rowspan="2" class="male"><div class="nm">Montjeu</div><div class="meta">1996</div></td><td rowspan="1" class="male point"><div class="nm">Sadler&#x27;s Wells</div><div class="meta">1981 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Floripedes</div><div class="meta">1985</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Out West</div><div class="meta">1994</div></td><td rowspan="1" class="male point"><div class="nm">Gone West</div><div class="meta">1984 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Chellingoua</div><div class="meta">1983</div></td></tr>
+<tr><td rowspan="4" class="female point"><div class="nm">Top Table</div><div class="meta">1989</div></td><td rowspan="2" class="male point"><div class="nm">Shirley Heights</div><div class="meta">1975 英</div></td><td rowspan="1" class="male point"><div class="nm">Mill Reef</div><div class="meta">1968 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Hardiemma</div><div class="meta">1969</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Lora&#x27;s Guest</div><div class="meta">1984</div></td><td rowspan="1" class="male"><div class="nm">Be My Guest</div><div class="meta">1974</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Lora</div><div class="meta">1972</div></td></tr>
+<tr><td rowspan="16" class="female"><div class="nm">シュエットヌーベル</div><div class="meta">2014 新ひだか町</div></td><td rowspan="8" class="male point"><div class="nm">スマートファルコン</div><div class="meta">2005 静内町</div></td><td rowspan="4" class="male point"><div class="nm">ゴールドアリュール</div><div class="meta">1999 追分町</div></td><td rowspan="2" class="male point"><div class="nm">サンデーサイレンス</div><div class="meta">1986 米</div></td><td rowspan="1" class="male"><div class="nm">Halo</div><div class="meta">1969 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Wishing Well</div><div class="meta">1975</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">ニキーヤ</div><div class="meta">1993 米</div></td><td rowspan="1" class="male"><div class="nm">Nureyev</div><div class="meta">1977 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Reluctant Guest</div><div class="meta">1986</div></td></tr>
+<tr><td rowspan="4" class="female"><div class="nm">ケイシュウハーブ</div><div class="meta">1988 門別町</div></td><td rowspan="2" class="male"><div class="nm">ミシシツピアン</div><div class="meta">1971 米</div></td><td rowspan="1" class="male"><div class="nm">Vaguely Noble</div><div class="meta">1965 英</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Gazala</div><div class="meta">1964</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">キヨウエイシラユキ</div><div class="meta">1980 門別町</div></td><td rowspan="1" class="male"><div class="nm">クラウンドプリンス</div><div class="meta">1969 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">アリアーン</div><div class="meta">1968 英</div></td></tr>
+<tr><td rowspan="8" class="female"><div class="nm">クイックメール</div><div class="meta">2006 新ひだか町</div></td><td rowspan="4" class="male point"><div class="nm">タイキシャトル</div><div class="meta">1994 米</div></td><td rowspan="2" class="male"><div class="nm">Devil&#x27;s Bag</div><div class="meta">1981 米</div></td><td rowspan="1" class="male"><div class="nm">Halo</div><div class="meta">1969 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Ballade</div><div class="meta">1972</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Welsh Muffin</div><div class="meta">1987</div></td><td rowspan="1" class="male point"><div class="nm">Caerleon</div><div class="meta">1980 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Muffitys</div><div class="meta">1982</div></td></tr>
+<tr><td rowspan="4" class="female point"><div class="nm">タニノメール</div><div class="meta">1993 静内町</div></td><td rowspan="2" class="male point"><div class="nm">リヴリア</div><div class="meta">1982 米</div></td><td rowspan="1" class="male point"><div class="nm">Riverman</div><div class="meta">1969 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Dahlia</div><div class="meta">1970</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">アロマックアステル</div><div class="meta">1986 静内町</div></td><td rowspan="1" class="male"><div class="nm">ラツキーソブリン</div><div class="meta">1974 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">タニノテスコ</div><div class="meta">1975 静内町</div></td></tr>
+</table>
+</div>
+
+    <div class="scroll">
+      <table>
+        <thead><tr><th>項目</th><th class="num">点</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>血統</td><td class="num">7</td><td>サンデーサイレンスが <code>4×4</code> で、3頭では一番近い。母方の入り方はスマートファルコンの父ゴールドアリュールで、ダート側のサンデー。参考馬の3代以内には届かない。Nijinsky は母方6代、Riverman は母方5代、Caerleon は母方5代。Pretty Polly は17本で一番多い。母方の Baby Polly は10代で一番近い。Worden はない。</td></tr>
+          <tr><td>馬体</td><td class="num">6</td><td>体高153.0cmで中央より少し下。胸囲177cm、管囲20.5cmは中央。体重442kg。基準は満たし、3頭の中間。</td></tr>
+          <tr><td>近親</td><td class="num">4</td><td>兄弟はリバーブレーション98万円、シュエットアムール56万円。出走2頭、勝ち上がり0、合計154万円。いとこは0頭。母自身は6,295万円、母の兄弟タケルラスティは4,222万円で、産駒には出ていない。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  
+<section>
+    <h2>ランウェイデビューの25</h2>
+    <p>募集番号25。牡。2025年3月12日生。生産地は新ひだか町。総額2,560万円、一口6.4万円。栗東・清水久詞。母10歳の5番仔。</p>
+<h3>5代血統表</h3>
+<div class="legend"><span><i class="swatch" style="background:#e7f2fb"></i>牡</span><span><i class="swatch" style="background:#fdecef"></i>牝</span><span><i class="swatch" style="background:#e7f2fb;outline:2px solid #1e4a38;outline-offset:-2px"></i>前提で名前を挙げた馬</span></div>
+<p class="swipe-hint">スマートフォンでは、血統表を横にスワイプできます。</p>
+<div class="ped-scroll" tabindex="0" aria-label="ランウェイデビューの25の5代血統表">
+<table class="ped">
+<tr><td rowspan="16" class="male point"><div class="nm">タイトルホルダー</div><div class="meta">2018 新ひだか町</div></td><td rowspan="8" class="male point"><div class="nm">ドゥラメンテ</div><div class="meta">2012 安平町</div></td><td rowspan="4" class="male point"><div class="nm">キングカメハメハ</div><div class="meta">2001 早来町</div></td><td rowspan="2" class="male"><div class="nm">Kingmambo</div><div class="meta">1990 米</div></td><td rowspan="1" class="male point"><div class="nm">Mr. Prospector</div><div class="meta">1970 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Miesque</div><div class="meta">1984</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">マンファス</div><div class="meta">1991 愛</div></td><td rowspan="1" class="male"><div class="nm">Last Tycoon</div><div class="meta">1983</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Pilot Bird</div><div class="meta">1983</div></td></tr>
+<tr><td rowspan="4" class="female point"><div class="nm">アドマイヤグルーヴ</div><div class="meta">2000 早来町</div></td><td rowspan="2" class="male point"><div class="nm">サンデーサイレンス</div><div class="meta">1986 米</div></td><td rowspan="1" class="male"><div class="nm">Halo</div><div class="meta">1969 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Wishing Well</div><div class="meta">1975</div></td></tr>
+<tr><td rowspan="2" class="female point"><div class="nm">エアグルーヴ</div><div class="meta">1993 早来町</div></td><td rowspan="1" class="male point"><div class="nm">トニービン</div><div class="meta">1983 愛</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">ダイナカール</div><div class="meta">1980 白老町</div></td></tr>
+<tr><td rowspan="8" class="female point"><div class="nm">メーヴェ</div><div class="meta">2008 英</div></td><td rowspan="4" class="male point"><div class="nm">Motivator</div><div class="meta">2002 英</div></td><td rowspan="2" class="male"><div class="nm">Montjeu</div><div class="meta">1996</div></td><td rowspan="1" class="male point"><div class="nm">Sadler&#x27;s Wells</div><div class="meta">1981 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Floripedes</div><div class="meta">1985</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Out West</div><div class="meta">1994</div></td><td rowspan="1" class="male point"><div class="nm">Gone West</div><div class="meta">1984 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Chellingoua</div><div class="meta">1983</div></td></tr>
+<tr><td rowspan="4" class="female point"><div class="nm">Top Table</div><div class="meta">1989</div></td><td rowspan="2" class="male point"><div class="nm">Shirley Heights</div><div class="meta">1975 英</div></td><td rowspan="1" class="male point"><div class="nm">Mill Reef</div><div class="meta">1968 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Hardiemma</div><div class="meta">1969</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Lora&#x27;s Guest</div><div class="meta">1984</div></td><td rowspan="1" class="male"><div class="nm">Be My Guest</div><div class="meta">1974</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Lora</div><div class="meta">1972</div></td></tr>
+<tr><td rowspan="16" class="female"><div class="nm">ランウェイデビュー</div><div class="meta">2015 新ひだか町</div></td><td rowspan="8" class="male point"><div class="nm">ストロングリターン</div><div class="meta">2006 千歳市</div></td><td rowspan="4" class="male point"><div class="nm">シンボリクリスエス</div><div class="meta">1999 米</div></td><td rowspan="2" class="male point"><div class="nm">Kris S.</div><div class="meta">1977 米</div></td><td rowspan="1" class="male"><div class="nm">Roberto</div><div class="meta">1969 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Sharp Queen</div><div class="meta">1965</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Tee Kay</div><div class="meta">1991</div></td><td rowspan="1" class="male"><div class="nm">Gold Meridian</div><div class="meta">1982</div></td></tr>
+<tr><td rowspan="1" class="female point"><div class="nm">Tri Argo</div><div class="meta">1982</div></td></tr>
+<tr><td rowspan="4" class="female"><div class="nm">コートアウト</div><div class="meta">1998 米</div></td><td rowspan="2" class="male point"><div class="nm">Smart Strike</div><div class="meta">1992 加</div></td><td rowspan="1" class="male point"><div class="nm">Mr. Prospector</div><div class="meta">1970 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Classy&#x27;n Smart</div><div class="meta">1981</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">Azhaar</div><div class="meta">1991</div></td><td rowspan="1" class="male point"><div class="nm">Nijinsky</div><div class="meta">1967 加</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Smart Heiress</div><div class="meta">1979</div></td></tr>
+<tr><td rowspan="8" class="female"><div class="nm">デビュートウショウ</div><div class="meta">2010 新ひだか町</div></td><td rowspan="4" class="male"><div class="nm">アドマイヤムーン</div><div class="meta">2003 早来町</div></td><td rowspan="2" class="male"><div class="nm">エンドスウィープ</div><div class="meta">1991 米</div></td><td rowspan="1" class="male"><div class="nm">Forty Niner</div><div class="meta">1985</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Broom Dance</div><div class="meta">1979</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">マイケイティーズ</div><div class="meta">1998 早来町</div></td><td rowspan="1" class="male point"><div class="nm">サンデーサイレンス</div><div class="meta">1986 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">ケイティーズファースト</div><div class="meta">1987 米</div></td></tr>
+<tr><td rowspan="4" class="female point"><div class="nm">タバサトウショウ</div><div class="meta">1993 静内町</div></td><td rowspan="2" class="male point"><div class="nm">ダンシングブレーヴ</div><div class="meta">1983 米</div></td><td rowspan="1" class="male point"><div class="nm">Lyphard</div><div class="meta">1969 米</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">Navajo Princess</div><div class="meta">1974</div></td></tr>
+<tr><td rowspan="2" class="female"><div class="nm">サマンサトウショウ</div><div class="meta">1985 静内町</div></td><td rowspan="1" class="male"><div class="nm">トウシヨウボーイ</div><div class="meta">1973 静内町</div></td></tr>
+<tr><td rowspan="1" class="female"><div class="nm">マーブルトウシヨウ</div><div class="meta">1978 静内町</div></td></tr>
+</table>
+</div>
+
+    <div class="scroll">
+      <table>
+        <thead><tr><th>項目</th><th class="num">点</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>血統</td><td class="num">6</td><td>ダンシングブレーヴが母方4代、Mr. Prospector が <code>5×5</code> で、米国スピードは3頭で一番近い。サンデーは <code>4×5</code>。Kris S. は母方4代、Seattle Slew は母方6代で、2代の中のナスキロではない。Pretty Polly では、タイトルホルダーの Lady Angela 以外の2本、Lady Maureen と Baby Polly を母も持っている。15代前後なので点は動かしていない。Worden はない。</td></tr>
+          <tr><td>馬体</td><td class="num">8</td><td>体高156.0cmで、牡24頭では上に6頭。管囲21.0cmは最大タイ。胸囲177cm。体重436kgは中央より下で、骨の割に重い馬ではない。10点は体高・管囲・体重が揃って上位にある場合。</td></tr>
+          <tr><td>近親</td><td class="num">5</td><td>兄弟はランウェイミューズ975万円、デビューフライト566万円。出走3頭、勝ち上がり0、合計1,541万円。芝19戦で3着内6回、良馬場の上がり最良は芝32.9秒。いとこは0頭。母自身の1,955万円が、デビュートウショウの産駒で本賞金がある唯一の馬。スウィープトウショウは点に入れていない。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <footer>
-    <p>個人の出資検討用です。検索エンジンには載せない設定にしています。繁殖馬マスタを15代までたどった血統と、2026年9月28日の体尺、中央の本賞金によります。</p>
+    <p>個人の出資検討用です。検索エンジンには載せない設定にしています。繁殖馬マスタの血統と、2026年9月28日の体尺、中央の本賞金によります。生年と産地は繁殖馬マスタの値です。</p>
   </footer>
 </main>
 </body>
